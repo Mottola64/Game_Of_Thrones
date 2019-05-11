@@ -1,5 +1,3 @@
-require "nokogiri"
-
 class Game_Of_Thrones::Scraper
   attr_accessor :number, :name, :directedby, :writtenby, :airdate 
   url = https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes
