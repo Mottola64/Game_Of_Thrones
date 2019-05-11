@@ -1,5 +1,5 @@
 Class Game_Of_Thrones::Episodes
-attr_accessor :season, :episode :description
+attr_accessor :season, :episode, :description, :airdate
 @@all = []
 
 def initialize

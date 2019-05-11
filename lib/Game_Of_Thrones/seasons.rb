@@ -1,4 +1,5 @@
 class Game_Of_Thrones::Seasons
+  attr_accessor :number, :episodes
   
   def self.season
     puts "Game Of Thrones Seasons:"
