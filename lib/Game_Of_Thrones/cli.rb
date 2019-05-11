@@ -40,6 +40,8 @@ class Game_Of_Thrones::CLI
         puts "more on 6"
       when "7"
         puts "more on 7"
+      else
+        puts "Not sure what you want? Type list or exit."
       end
     end
  end
