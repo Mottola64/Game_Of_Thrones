@@ -1,7 +1,7 @@
 class Game_Of_Thrones::Seasons
   
   def self.season
-   puts "Game Of Thrones Seasons:"
+    puts "Game Of Thrones Seasons:"
     puts "1.  Season One"
     puts "2.  Season Two"
     puts "3.  Season Three"

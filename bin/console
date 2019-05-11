@@ -11,4 +11,4 @@ require "Game_Of_Thrones"
 # Pry.start
 
 require "irb"
-IRB.start(__FILE__)
+IRB.start

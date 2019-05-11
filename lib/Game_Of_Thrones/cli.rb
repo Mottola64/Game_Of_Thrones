@@ -7,7 +7,6 @@ class Game_Of_Thrones::CLI
   end
   
   def list_seasons
-   
     @seasons = Game_Of_Thrones::Seasons.season
     end
   
@@ -39,8 +38,9 @@ class Game_Of_Thrones::CLI
       end
     end
  end
+ 
   def goodbye
     puts "In the Game Of Thrones, you win or you die"
-    end
+  end
   
 end
