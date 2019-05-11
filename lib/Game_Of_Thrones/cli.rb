@@ -15,13 +15,14 @@ class Game_Of_Thrones::CLI
     puts "5.  Season Five"
     puts "6.  Season Six"
     puts "7.  Season Seven"
-  end
+    end
   
   def menu
     input = nil
+    
     while input != "exit"
+    puts "Enter the number of the season you'd like more info on, type list to see the list of seasons again or type exit:"
       input = gets.strip.downcase
-      puts "Enter the number of the season you'd like more info on, type list to see the list of seasons again or type exit:"
       case input
       when "list"
         list_seasons
@@ -41,10 +42,9 @@ class Game_Of_Thrones::CLI
         puts "more on 7"
       end
     end
-  end
-  
+ end
   def goodbye
-    "In the Game Of Thrones, you win or you die"
+    puts "In the Game Of Thrones, you win or you die"
     end
   
 end
