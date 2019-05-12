@@ -1,11 +1,11 @@
 class Game_Of_Thrones::Episodes
-attr_accessor :name, :recap, :memorableline 
+attr_accessor :name, :recap, :airdate 
 @@all = []
 
-  def initialize(name, recap, memorableline)
+  def initialize(name, recap, airdate)
     @name = name
     @recap = recap
-    @memorableline = memorableline
+    @airdate = airdate
     @@all << self 
   end
 

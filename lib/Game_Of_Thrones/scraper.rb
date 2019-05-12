@@ -5,8 +5,8 @@ class Game_Of_Thrones::Scraper
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)
   end
 end
       
@@ -15,8 +15,8 @@ end
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)
   end
 end
   
@@ -25,8 +25,8 @@ end
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)  
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)  
   end
 end
   def self.scrape_episodes_four
@@ -34,8 +34,8 @@ end
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)
   end
 end
   def self.scrape_episodes_five
@@ -43,8 +43,8 @@ end
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)
   end
 end
   def self.scrape_episodes_six
@@ -52,8 +52,8 @@ end
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)
   end
 end
   def self.scrape_episodes_seven
@@ -61,8 +61,8 @@ end
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)  
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)  
   end
 end
   def self.scrape_episodes_eight
@@ -70,8 +70,8 @@ end
     doc.css("div.list_item"). each do |episode|
       name = episode.css("strong").text.strip
       recap = episode.css("item_description").text.strip
-      memorableline = episode.css("airdate").text.strip
-      Game_Of_Thrones::Episodes.new(name, recap, memorableline)
+      airdate = episode.css("airdate").text.strip
+      Game_Of_Thrones::Episodes.new(name, recap, airdate)
   end
 end
 end
