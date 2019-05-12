@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+require 'open-uri'
 require "bundler/setup"
 require './lib/Game_Of_Thrones'
 

@@ -1,6 +1,6 @@
 class Game_Of_Thrones::Scraper
   
-  attr_accessor :number, :name, :directedby, :writtenby, :airdate 
+  attr_accessor :number, :name, :directedby, :airdate 
   
   def self.scrape_episodes
     wiki_url = "https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes"
