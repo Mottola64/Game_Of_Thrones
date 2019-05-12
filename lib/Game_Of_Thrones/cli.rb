@@ -9,7 +9,7 @@ class Game_Of_Thrones::CLI
   end
   
   def scrape_episodes
-    Scraper.scrape_episodes
+    Game_Of_Thrones::Scraper.scrape_episodes
   end
   
   def list_episodes
@@ -22,12 +22,6 @@ class Game_Of_Thrones::CLI
     else 
       puts "Enter valid input."
       list_episodes
-    end
-  end
-  
-  def display_books
-    Book.all.each.with_index(1) do |book, index|
-      puts "#{index}: #{book.title} - #{book.author}"
     end
   end
   

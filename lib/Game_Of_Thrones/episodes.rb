@@ -1,4 +1,4 @@
-Class Game_Of_Thrones::Episodes
+class Game_Of_Thrones::Episodes
 attr_accessor :number, :name, :directedby, :writtenby, :airdate 
 @@all = []
 
@@ -18,5 +18,4 @@ attr_accessor :number, :name, :directedby, :writtenby, :airdate
   def self.all
     @@all
   end
-
 end
