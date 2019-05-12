@@ -1,12 +1,11 @@
 class Game_Of_Thrones::Episodes
-attr_accessor :number, :name, :directedby, :airdate 
+attr_accessor :name, :recap, :memorableline 
 @@all = []
 
-  def initialize(number, name, directedby, airdate)
-    @number = number
+  def initialize(name, recap, memorableline)
     @name = name
-    @directedby = directedby
-    @airdate = airdate
+    @recap = recap
+    @memorableline = memorableline
     @@all << self 
   end
 
@@ -14,7 +13,8 @@ attr_accessor :number, :name, :directedby, :airdate
     @@all
   end
 
-  def self.all
-    @@all
+  def self.find_by_index(index)
+    @@all[index]
   end
+  
 end

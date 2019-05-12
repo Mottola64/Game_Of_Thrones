@@ -1,23 +1,20 @@
 class Game_Of_Thrones::Scraper
   
-  attr_accessor :number, :name, :directedby, :airdate 
+  attr_accessor :name, :recap, :memorableline 
   
   def self.scrape_episodes
-    wiki_url = "https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes"
-    html = open(wiki_url)
-    doc = Nokogiri::HTML(html).css("vevent")
+    #episodes_array = [] 
     
-    episodes_array = []
-    
-    doc.each do |episode|
-      episode_number = episode.css("th").text
-      episode_name = episode.css("td.summary").text
-      episode_directed = episode.css("td").text
-      episode_airdate = episode.css("span>").value
+    doc = Nokogiri::HTML(open("http://time.com/5517025/game-of-thrones-binge-watch-recaps/"))
+    doc.css("id article body"). each do |episode|
+      name = episode.css("h3.Episode name").text
+      recap = episode.css("h3.Episode recap p").text
+      memorableline = episode.css("h3.Most memorable line").text
+      Game_Of_Thrones::Episodes.new(name, recap, memorableline)
       
-      episodes_array << {number: episode_number, name: episode_name, directedby: episode_directed, airdate: episode_airdate}
+      #episodes_array << {number: episode_number, name: episode_name, directedby: episode_directed, airdate: episode_airdate}
     end
-    episodes_array
+    #episodes_array
   end
 end
     
