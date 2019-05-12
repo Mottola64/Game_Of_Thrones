@@ -1,10 +1,11 @@
 class Game_Of_Thrones::Scraper
   
-  require 'nokogiri'
   attr_accessor :number, :name, :directedby, :writtenby, :airdate 
   
   def self.scrape_episodes
-    doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes")).css("vevent")
+    wiki_url = "https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes"
+    html = open(wiki_url)
+    doc = Nokogiri::HTML(html).css("vevent")
     
     episodes_array = []
     
