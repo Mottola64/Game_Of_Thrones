@@ -1,6 +1,8 @@
 class Game_Of_Thrones::CLI
   
   def call
+    puts "Welcome to the Game Of Thrones episodes listings."
+    puts "Which season would you like to see the episodes of?"
     Game_Of_Thrones::Scraper.scrape_episodes
     list_episodes
   end
