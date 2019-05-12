@@ -5,4 +5,4 @@ require './lib/Game_Of_Thrones'
 
 
 
-Game_Of_Thrones::CLI.new.call
+Game_Of_Thrones::CLI.new.welcome
