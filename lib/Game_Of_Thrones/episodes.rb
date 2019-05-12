@@ -13,6 +13,10 @@ attr_accessor :name, :recap, :memorableline
     @@all
   end
 
+  def self.destroy_all
+    @@all.clear
+  end
+  
   def self.find_by_index(index)
     @@all[index]
   end

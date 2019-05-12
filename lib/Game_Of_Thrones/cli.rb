@@ -6,8 +6,12 @@ class Game_Of_Thrones::CLI
     list_seasons
     puts ""
     call
+    goodbye
   end
-    
+  
+  def goodbye
+    puts "In the Game Of Thrones, you win or you die"
+  end 
   
   def list_seasons
     puts "1.  Season One"
@@ -64,32 +68,32 @@ class Game_Of_Thrones::CLI
     puts "Here is a list of all the Game of Thrones episodes:"
     episode = Game_Of_Thrones::Episodes.all
       episode.each.with_index(1) {|episode, index| puts "#{index}. #{episode.name}"}
-        puts ""
+      Game_Of_Thrones::Episodes.destroy_all
+      puts ""
     puts "Type back to go back, or type exit to leave"
-    input = nil
-    while input != "exit"
+    puts ""
     input = gets.strip.downcase
-    case input
-    when "back"
+    puts "---------------------------------------------------"
+    if input = "back"
       list_seasons
+    elsif input = "exit"
+      goodbye
     else
       puts "Not Today! Please try again."
     end
   end
-  end
 end
 
+
+
   def call
-    input = nil
     puts "Enter the number of the season you'd like more info on:"
+    input = nil
     while input != "exit"
     input = gets.strip.downcase
     case input
-    when "list"
-      list_seasons
     when "1"
       season_one
-      puts "Enter the number of the episode you'd like more info on:"
     when "2"
       season_two
     when "3"
@@ -104,20 +108,8 @@ end
       season_seven
     when "8"
       season_eight
-    else
-     puts "Not sure what you want? Type list or exit."
-  end
+    end
  end
  
-    
-
-  
- 
-
-
 end
-
- # def goodbye
- #   puts "In the Game Of Thrones, you win or you die"
-#  end
-  
+ 
