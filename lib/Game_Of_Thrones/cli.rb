@@ -1,27 +1,16 @@
 class Game_Of_Thrones::CLI
   
   def call
-    puts "Welcome Game Of Thrones Fan!"
-    scrape_episodes
-    list_episodes
-    #menu
-  end
-  
-  def scrape_episodes
     Game_Of_Thrones::Scraper.scrape_episodes
+    list_episodes
+    
   end
   
   def list_episodes
-    puts "Would you like to view the list of Game Of Thrones episodes? Enter y or n:"
-    input = gets.strip.downcase
-    if input == "y" 
-      scrape_episodes
-    elsif input == "n"
-     goodbye
-    else 
-      puts "Enter valid input."
-      list_episodes
-    end
+    puts "Here is a list of all the Game of Thrones episodes:"
+    episode - Game_Of_Thrones::Episodes.all
+    episodes.each.with_index(1) {|episode, index| puts "#{index}. #{episode.name}"
+    puts ""
   end
   
   #def display_episodes
